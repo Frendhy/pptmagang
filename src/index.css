@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-dark: #020617;
+  --color-brand-card: #0b1329;
+  --color-brand-card-light: #16223f;
+  --color-brand-blue: #2563eb;
+  --color-brand-cyan: #38bdf8;
+  --color-brand-accent: #1d4ed8;
+  
+  --shadow-glow-blue: 0 0 20px rgba(37, 99, 235, 0.15);
+  --shadow-glow-cyan: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(11, 19, 41, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(148, 163, 184, 0.08);
+  }
+  .glass-card-hover:hover {
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.08);
+  }
+  .glow-border-blue {
+    border-color: rgba(37, 99, 235, 0.4);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.15);
+  }
+  .glow-border-cyan {
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.03); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s infinite ease-in-out;
+}
+

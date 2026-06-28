@@ -1,0 +1,6 @@
+{
+  "name": "Dunia Kimia Jaya AR Presentation",
+  "description": "An interactive, high-fidelity dark blue presentation slide deck for the Account Receivable web application report at PT Dunia Kimia Jaya, featuring dynamic charts, slide navigator, speaker notes, and interactive code simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
